@@ -67,27 +67,27 @@ Original Repository URL:
     cd library-management-system
 ```
 
- ![alt text](images/forked-repo.PNG)
+ ![alt text](screenshots/forked-repo.PNG)
 ### Build Docker Image
 ```
     docker build -t library-app:v1 .
 ```
- ![alt text](images/docker-build.PNG)
+ ![alt text](screenshots/docker-build.PNG)
 ### Run Docker Container
 ```
     docker run -d -p 5000:5000 --name library-container library-app:v2
 ```
- ![alt text](images/docker-run.PNG)
+ ![alt text](screenshots/docker-run.PNG)
 ### Verify Container Status
 ```
-    docker ps -a
+    docker ps 
 ```
- ![alt text](images/docker-ps.PNG)
+ ![alt text](screenshots/docker-ps.PNG)
 ### View Container Logs
 ```
     docker logs library-container
 ```
- ![alt text](images/docker-logs.PNG)
+ ![alt text](screenshots/docker-logs.PNG)
 ## Dockerfile
 
     FROM python:3.11-slim
@@ -109,7 +109,7 @@ Original Repository URL:
 ## Output
  
  <your-EC2-instance-public-ip:5000>
-![alt text](images/output.PNG)
+![alt text](screenshots/output.PNG)
 
 ## Problems Faced and Resolution
 
@@ -138,8 +138,8 @@ The issue was identified through Docker logs and code inspection. The Docker ima
 * Container logs were analyzed for debugging.
 * Application startup issue was identified and investigated.
 
-## 8. Conclusion
+## Conclusion
 
-The Flask application was containerized using Docker and deployed on an AWS EC2 instance. 
-Docker image creation, container deployment, and troubleshooting were successfully performed. 
-Application startup issues were identified through log analysis and documented accordingly.
+- The Flask application was containerized using Docker and deployed on an AWS EC2 instance. 
+- Docker image creation, container deployment, and troubleshooting were successfully performed. 
+- Application startup issues were identified through log analysis and documented accordingly.
